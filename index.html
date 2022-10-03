@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- Make sure your page supports utf-8 characterset. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Make sure your page is responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- import bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Load TensorFlow.js. This is required to use the qna model. 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script>
+    -->
+    <script src="lib/tfjs.js"> </script>
+    <!-- Load the qna model. -->
+    <script src="lib/qna.js"> </script>
+
+ 
+</head>
+<body>
+
+    <!--create select option center display-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-group">
+                    <label for="sel1">Sugerencias:</label>
+                    <select class="form-control" id="sel1">
+                        <option>nombre del alcalde de ricaurte nariño</option>
+                        <option>categoria del municipio de ricaurte nariño</option>
+                        <option>fundador del municipio de ricaurte</option>
+                        <option>año en que se fundo ricaurte nariño</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+    
+    <!-- create input question bootstrap beautiful -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="question">PREGUNTA</label>
+                    <textarea class="form-control" id="question" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- create button bootstrap beautiful -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" id="btn" onclick="responseModel()">PREGUNTAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- create div bootstrap beautiful -->
+    <div class="container" id="answer">
+        
+    </div>
+
+
+   <!-- import script.js -->
+   <script src="script.js"></script>
+    
+</body>
+</html>
